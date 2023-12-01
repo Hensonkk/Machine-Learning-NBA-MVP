@@ -1,15 +1,16 @@
-# SMU Data Science Bootcamp Project #4
+# Machine Learning the NBA Most Valuable Player Award
+*SMU Data Science Bootcamp Project #4*
 
-## Project Title:
-A Machine Learning Model to Predict the Winner of the NBA Most Valuable Player Award
+## Project Title
+**A Machine Learning Model to Predict the Winner of the NBA Most Valuable Player Award**
 
-## Team Members:
+## Team Members
 Devin Streeter, Sullivan Shave, Christopher Baker, KeyShawn Henson, and Jack Hayes
 
-## Project Description/Outline:
+## Project Description/Outline
 Utilizing the NBA MVP scoring system, historical NBA players statistics, and past NBA MVP winner results, we will aim to create a machine learning model that can predict the 2023-24 NBA MVP.
 
-## Research Questions:
+## Research Questions
 - What statistics have the most impact on MVP voting?
 - How does previous season performance affect current season MVP voting?
 - How confident should we be with the results of the model? 
@@ -20,18 +21,18 @@ Utilizing the NBA MVP scoring system, historical NBA players statistics, and pas
 - How does League MVP gambling odds impact voting?
 - Which player has accumulated the most revenue(ex:jersey sales)
 
-## Datasets:
+## Datasets
 - [NBA MVP Voting Results](https://www.kaggle.com/justinas/nba-mvp-voting-results-from-19802019)
 
-## Breakdown of Tasks:
+## Breakdown of Tasks
 
-#### Data Collection:
+#### Data Collection
 Gather historical data on past NBA seasons, including player statistics, team performance, and previous MVP winners.
 
-#### Feature Selection:
+#### Feature Selection
 Identify the most relevant features that could influence the MVP award. This could be based on statistical analysis or common knowledge. For instance, points per game, assists, rebounds, team success, and player popularity could be significant factors.
 
-#### Data Preprocessing:
+#### Data Preprocessing
 Clean and pre-process the data. This involves handling missing values, normalizing or standardizing the data, and possibly creating new features that could help in prediction (like player impact estimates).
 
 #### Model Selection:
