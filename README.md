@@ -1,4 +1,6 @@
 # Machine Learning the NBA Most Valuable Player Award
+![Screenshot 2023-12-01 at 12 20 58 AM](https://github.com/Hensonkk/Machine-Learning-NBA-MVP/assets/133677209/feba1b8f-d434-4469-9493-0f9d62aa50d6)
+
 *SMU Data Science Bootcamp Project #4*
 
 ## Project Title
