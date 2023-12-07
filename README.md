@@ -25,6 +25,8 @@ Utilizing the NBA MVP scoring system, historical NBA players statistics, and pas
 
 ## Datasets
 - [NBA MVP Voting Results](https://www.kaggle.com/justinas/nba-mvp-voting-results-from-19802019)
+- [Historical NBA Raptor and PREDATOR Data](https://github.com/fivethirtyeight/data/blob/master/nba-raptor/historical_RAPTOR_by_team.csv)
+- [Latest NBA RAPTOR and PREDATOR Data](https://projects.fivethirtyeight.com/nba-model/2023/latest_RAPTOR_by_team.csv)
 
 ## Breakdown of Tasks
 
