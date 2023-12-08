@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Player Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabs {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #eee;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .active-tab {
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="player1" class="tab-content">
+        <h2>LeBron James</h2>
+        <p>Team: Los Angeles Lakers</p>
+        <!-- Add more player details as needed -->
+    </div>
+    
+    <div id="player2" class="tab-content">
+        <h2>Stephen Curry</h2>
+        <p>Team: Golden State Warriors</p>
+
+    </div>
+    
+    <div id="player3" class="tab-content">
+        <h2>Kawhi Leonard</h2>
+        <p>Team: Los Angeles Clippers</p>
+
+    </div>
+    
+    <ul class="tabs">
+        <li class="tab" onclick="changePlayer('player1')">LeBron James</li>
+        <li class="tab" onclick="changePlayer('player2')">Stephen Curry</li>
+        <li class="tab" onclick="changePlayer('player3')">Kawhi Leonard</li>
+
+    </ul>
+    
+    <script>
+        function changePlayer(playerId) {
+
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = 'none';
+            }
+    
+
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active-tab');
+            }
+    
+
+            document.getElementById(playerId).style.display = 'block';
+    
+
+            var selectedTab = document.querySelector('[onclick="changePlayer(\'' + playerId + '\')"]');
+            selectedTab.classList.add('active-tab');
+        }
+    </script>
+    
+    </body>
+    </html>
