@@ -1,97 +1,249 @@
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBA Player Dashboard</title>
+    <title>NBA Player Stats</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            text-align: center;
         }
 
-        .tabs {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .tab {
-            cursor: pointer;
-            padding: 10px 20px;
-            background-color: #eee;
-            margin-right: 5px;
+        .player-card {
+            display: inline-block;
+            margin: 20px;
             border: 1px solid #ccc;
-            border-radius: 5px 5px 0 0;
+            padding: 10px;
         }
 
-        .tab:hover {
-            background-color: #ddd;
+        .player-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 0 0 5px 5px;
+        .player-image {
+            max-width: 100%;
+            height: auto;
         }
 
-        .active-tab {
-            background-color: #fff;
-            border-bottom: 1px solid #fff;
+        .player-stats {
+            margin-top: 10px;
         }
     </style>
 </head>
+
 <body>
+    <h1>NBA Player Stats</h1>
+    <div id="players-container"></div>
 
-    <div id="player1" class="tab-content">
-        <h2>LeBron James</h2>
-        <p>Team: Los Angeles Lakers</p>
-        <!-- Add more player details as needed -->
-    </div>
-    
-    <div id="player2" class="tab-content">
-        <h2>Stephen Curry</h2>
-        <p>Team: Golden State Warriors</p>
-
-    </div>
-    
-    <div id="player3" class="tab-content">
-        <h2>Kawhi Leonard</h2>
-        <p>Team: Los Angeles Clippers</p>
-
-    </div>
-    
-    <ul class="tabs">
-        <li class="tab" onclick="changePlayer('player1')">LeBron James</li>
-        <li class="tab" onclick="changePlayer('player2')">Stephen Curry</li>
-        <li class="tab" onclick="changePlayer('player3')">Kawhi Leonard</li>
-
-    </ul>
-    
     <script>
-        function changePlayer(playerId) {
+        const playerData = [
+            { name: 'Anthony Davis', image: 'Anthony Davis Picture.webp' },
+            { name: 'Jimmy Butler', image: 'Jimmy Butler Picture.avif' },
+            // Add data for other players
+        ];
 
-            var tabContents = document.getElementsByClassName('tab-content');
-            for (var i = 0; i < tabContents.length; i++) {
-                tabContents[i].style.display = 'none';
-            }
-    
+        const playersContainer = document.getElementById('players-container');
 
-            var tabs = document.getElementsByClassName('tab');
-            for (var i = 0; i < tabs.length; i++) {
-                tabs[i].classList.remove('active-tab');
-            }
-    
+        playerData.forEach(player => {
+            const playerCard = document.createElement('div');
+            playerCard.classList.add('player-card');
 
-            document.getElementById(playerId).style.display = 'block';
-    
+            const playerName = document.createElement('div');
+            playerName.classList.add('player-name');
+            playerName.textContent = player.name;
 
-            var selectedTab = document.querySelector('[onclick="changePlayer(\'' + playerId + '\')"]');
-            selectedTab.classList.add('active-tab');
+            const playerImage = document.createElement('img');
+            playerImage.classList.add('player-image');
+            playerImage.src = player.image;
+
+            const playerStats = document.createElement('div');
+            playerStats.classList.add('player-stats');
+
+            // Fetch and display stats from the JSON file
+            fetch(player.json)
+                .then(response => response.json())
+                .then(stats => {
+                    // Assuming the stats are accessible as properties of the stats object
+                    // Modify this part based on the actual structure of your JSON data
+                    Object.entries(stats).forEach(([key, value]) => {
+                        const statElement = document.createElement('div');
+                        statElement.textContent = `${key}: ${value}`;
+                        playerStats.appendChild(statElement);
+                    });
+                })
+                .catch(error => console.error(`Error loading ${player.json}:`, error));
+
+            playerCard.appendChild(playerName);
+            playerCard.appendChild(playerImage);
+            playerCard.appendChild(playerStats);
+
+            playersContainer.appendChild(playerCard);
+        });
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Player Bubble Cloud Chart</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .chart-container {
+            text-align: center;
+        }
+
+        .player-name {
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #player-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #player-modal img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>NBA Player Bubble Cloud Chart</h1>
+    <div class="chart-container" id="bubble-chart"></div>
+
+    <div id="player-modal">
+        <img id="modal-image" alt="Player Image">
+    </div>
+
+    <script>
+        // Sample player data
+        const playerData = [
+            'Anthony Davis',
+            'Jimmy Butler',
+            'Anthony Edwards',
+            'Joel Embiid',
+            'Bam Adebayo',
+            'Kawhi Leonard',
+            'Damian Lillard',
+            'Kevin Durant',
+            'De’Aaron Fox',
+            'LeBron James',
+            'Devin Booker',
+            'Luka Doncic',
+            'Domantas Sabonis',
+            'Nikola Jokic',
+            'Donovan Mitchell',
+            'Paul George',
+            'Giannis Antetokounmpo',
+            'Shai Gilgeous-Alexander',
+            'Ja Morant',
+            'Stephen Curry',
+            'Jamal Murray',
+            'Tyrese Haliburton',
+            'Jayson Tatum',
+            'Zion Williamson',
+        ];
+
+        // Sample images path
+        const imagePathMap = {
+            'Anthony Davis': 'NBA Pictures/Anthony_Davis_Picture.webp',
+            'Jimmy Butler': 'path/to/images/JimmyButlerPicture.jpg',
+            // Add paths for other players
+        };
+
+        // Set up the chart
+        const diameter = 600;
+
+        const bubble = d3.pack(playerData)
+            .size([diameter, diameter])
+            .padding(1.5);
+
+        const svg = d3.select("#bubble-chart")
+            .append("svg")
+            .attr("width", diameter)
+            .attr("height", diameter)
+            .attr("class", "bubble");
+
+        const nodes = d3.hierarchy({ children: playerData })
+            .sum(function (d) { return 1; });
+
+        const node = svg.selectAll(".node")
+            .data(bubble(nodes).descendants())
+            .enter()
+            .filter(d => !d.children)
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            });
+
+        node.append("circle")
+            .attr("r", function (d) { return d.r; })
+            .style("fill", "lightblue")
+            .on("click", function (d) {
+                showPlayerImage(d.data);
+            });
+
+        node.append("text")
+            .attr("dy", ".3em")
+            .style("text-anchor", "middle")
+            .text(function (d) { return d.data; })
+            .attr("class", "player-name")
+            .on("click", function (d) {
+                showPlayerImage(d.data);
+            });
+
+        function showPlayerImage(playerName) {
+            const modal = document.getElementById('player-modal');
+            const modalImage = document.getElementById('modal-image');
+            const imagePath = imagePathMap[playerName];
+
+            modalImage.src = imagePath;
+            modal.style.display = 'block';
+
+            // Close modal on click outside the image
+            modal.onclick = function () {
+                modal.style.display = 'none';
+            };
         }
     </script>
-    
-    </body>
-    </html>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
