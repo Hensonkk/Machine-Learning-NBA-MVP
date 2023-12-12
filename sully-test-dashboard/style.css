@@ -1,0 +1,192 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6a6969;
+    color: #333;
+}
+
+.large-text {
+    font-size: 36px;
+}
+
+.medium-text {
+    font-size: 24px;
+}
+
+.regular-text {
+    font-size: 18px;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: #6a6969;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.tabs button {
+    background-color: #6a6969;
+    float: left;
+    border: 1px solid #000000;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Change background color and font color of buttons on hover */
+.tab button:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.tabs button:hover {
+    background-color: #00ff3c;
+    color: #000;
+}
+
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #00ff3c;
+    color: #000;
+}
+
+.tabs button.active {
+    background-color: #00ff3c;
+    color: #000;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subtabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Style for heading */
+.tabcontent h3 {
+    margin-top: 0;
+    color: #444;
+}
+
+.tabcontent {
+    display: none;
+    
+}
+
+
+#Home {
+    display: block;
+}
+
+
+.tabcontent h1 {
+    color: #333;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* This centers the image in its container */
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+}
+
+center {
+    text-align: center;
+    font-size: 24px;
+}
+
+.button-link {
+    display: block;
+    padding: 10px 45px;
+    background-color: #6a6969;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none; /* Removes underline from links */
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.button-link:hover {
+    background-color: #00ff3c;
+}
+
+table {
+    width: 100%; /* Full-width */
+    border-collapse: collapse; /* Removes the space between borders */
+    margin: 20px 0; /* Adds some space around the table */
+}
+
+th, td {
+    border: 1px solid #000000; /* Light grey border */
+    padding: 8px; /* Spacing within cells */
+    text-align: center; /* Align text to the left */
+}
+
+th {
+    background-color: #272727; /* Light grey background for headers */
+    color: #333; /* Dark grey text for better readability */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for rows */
+}
+
+tr:hover {
+    background-color: #00ff33; /* Slight highlight on hover */
+}
+
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+}
+
