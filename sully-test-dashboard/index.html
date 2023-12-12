@@ -112,7 +112,46 @@
 
     <div id="Results" class="tabcontent">
         <h3>Results</h3>
-        <p>Results are shown here.</p>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    
+        <div class="tabs">
+            <button class="subtablinks" onclick="openSubTab(event, 'ChrisModel')">Chris' Model</button>
+            <button class="subtablinks" onclick="openSubTab(event, 'KeyshawnsModel')">Keyshawn's Model</button>
+            <button class="subtablinks" onclick="openSubTab(event, 'SullysModel')">Sully's Model</button>
+            <button class="subtablinks" onclick="openSubTab(event, 'DevsModel')">Dev's Model</button>
+        </div>
+    
+        <div id="bubble-chart" class="subtabcontent">
+            <div class="chart-container" id="bubble-chart-container"></div>
+            <div id="player-modal">
+                <img id="modal-image" alt="Player Image">
+                <div id="modal-stats"></div>
+            </div>
+
+            <script src="SVM_model.js" defer></script>
+        </div>
+    
+        <div id="KeyshawnsModel" class="subtabcontent">
+            <!-- <script src="SVM_model.js" defer></script> -->
+        
+            <div class="chart-container" id="keyshawns-bubble-chart-container"></div>
+        
+            <div id="keyshawns-player-modal">
+                <img id="keyshawns-modal-image" alt="Player Image">
+                <div id="keyshawns-modal-stats"></div>
+            </div>
+            <script src="SVM_model.js" defer></script>
+        </div>
+    
+        <div id="SullysModel" class="subtabcontent">
+            <div class="chart-container" id="sullys-bubble-chart-container"></div>
+            <div id="sullys-player-modal">
+                <img id="sullys-modal-image" alt="Player Image">
+                <div id="sullys-modal-stats"></div>
+            </div>
+        </div>
     </div>
 
     <div id="Analysis" class="tabcontent">
@@ -121,7 +160,7 @@
     </div>
 
     <script>
-        // JavaScript goes here
+    
     </script>
     <script src="script.js"></script>
 

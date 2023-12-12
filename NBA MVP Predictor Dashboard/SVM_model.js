@@ -12,7 +12,9 @@ const playerData = [
     {name:'Ja Morant', score: 1},
     {name:'Stephen Curry', score: .6},
     {name:'Jalen Brunson', score: .5},
-    {name:'Jayson Tatum', score: .3}
+    {name:'Jayson Tatum', score: .3},
+    {name:'Domantas Sabonis', score: .3}
+
 ];
 
 // Sample images path
@@ -30,6 +32,7 @@ const imagePathMap = {
     'Stephen Curry': 'NBA Pictures/Stephen_Curry_Picture.jpg',
     'Jalen Brunson': 'NBA Pictures/Jalen_Brunson_Picture.jpg',
     'Jayson Tatum': 'NBA Pictures/Jayson_Tatum_Picture.avif',
+    'Domantas Sabonis': 'NBA Pictures/Domantas_Sabonis_Picture.jpg',
    
 };
 
