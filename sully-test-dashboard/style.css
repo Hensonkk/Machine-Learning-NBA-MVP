@@ -191,7 +191,22 @@ tr:hover {
 }
 
 #resultsTab select, #resultsTab button {
-    /* Styles for dropdown or buttons */
+.node {
+    position: relative;
+    z-index: 2; /* Set a value higher than the images */
+}
+
+img {
+    position: absolute;
+    /* Add other positioning styles as needed */
+}
+
+#bubble-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add other styling as needed */
+}
 }
 
 .modelContent {
