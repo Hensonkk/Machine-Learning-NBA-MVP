@@ -1,27 +1,29 @@
 // Sample player data
 const playerData = [
-    {name: 'Jimmy Butler', score: 1},
-    {name:'Joel Embiid', score: .3},
-    {name:'De’Aaron Fox', score: 1},
-    {name:'Devin Booker', score: 1},
-    {name:'Luka Doncic',score: 1},
-    {name:'Nikola Jokic', score: .5},
+    {name:'Joel Embiid', score: 3.2},
+    {name:"De'Aaron Fox", score: 1},
+    {name:'Tyrese Maxey', score: 2.9},
+    {name:'Luka Doncic',score: 2.6},
+    {name:'Nikola Jokic', score: 4.6},
     {name:'Donovan Mitchell', score: 1},
-    {name:'Giannis Antetokounmpo', score: .2},
-    {name:'Shai Gilgeous-Alexander', score: 1},
-    {name:'Ja Morant', score: 1},
-    {name:'Stephen Curry', score: .6},
-    {name:'Jalen Brunson', score: .5},
-    {name:'Jayson Tatum', score: .3},
-    {name:'Domantas Sabonis', score: .3}
+    {name:'Giannis Antetokounmpo', score: 2.7},
+    {name:'Shai Gilgeous-Alexander', score: 3.8},
+    {name:'Stephen Curry', score: 2.2},
+    {name:'Jalen Brunson', score: 2.8},
+    {name:'Jayson Tatum', score: 2.6},
+    {name:'Kevin Durant', score: 2.6},
+    {name:'Damian Lillard', score: 2.3},
+    {name:'LeBron James', score: 2.1}
 ];
 
 // Sample images path
 const imagePathMap = {
+
+
     'Jimmy Butler': 'NBA Pictures/Jimmy_Butler_Picture.jpg',
     'Joel Embiid': 'NBA Pictures/Joel_Embiid_Picture.jpg',
-    'De’Aaron Fox': 'NBA Pictures/De’Aaron_Fox_Picture.jpg',
-    'Devin Booker': 'NBA Pictures/Devin_Booker_Picture.jpg',
+    "De'Aaron Fox": 'NBA Pictures/De’Aaron_Fox_Picture.jpg',
+    'Tyrese Maxey': 'NBA Pictures/Tyrese_Maxey_Picture.jpg',
     'Luka Doncic': 'NBA Pictures/Luka_Doncic_Picture.jpg',
     'Nikola Jokic': 'NBA Pictures/Nikola_Jokic_Picture.jpg',
     'Donovan Mitchell': 'NBA Pictures/Donovan_Mitchell_Picture.jpg',
@@ -31,7 +33,9 @@ const imagePathMap = {
     'Stephen Curry': 'NBA Pictures/Stephen_Curry_Picture.jpg',
     'Jalen Brunson': 'NBA Pictures/Jalen_Brunson_Picture.jpg',
     'Jayson Tatum': 'NBA Pictures/Jayson_Tatum_Picture.jpg',
-    'Domantas Sabonis': 'NBA Pictures/Domantas_Sabonis_Picture.jpg'
+    'Kevin Durant': 'NBA Pictures/Kevin_Durant_Picture.jpg',
+    'Damian Lillard': 'NBA Pictures/Damian_Lillard_Picture.jpg',
+    'LeBron James': 'NBA Pictures/LeBron_James_Picture.jpg'
    
 };
 
