@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA MVP</title>
     <style>
-        /* CSS goes here */
 
     </style>
     <link rel="stylesheet" href="style.css">
@@ -24,29 +23,25 @@
         <button class="tablinks" onclick="openPage(event, 'Analysis')">Analysis</button>
     </div>
 
-    <div id="Home" class="tabcontent">
-        <h1>A Machine Learning Model to Predict the Winner of the NBA Most Valuable Player Award</h1>
-        <img src="images/mvp-trophy.png" alt="mvp trophy">
-        <a href="https://github.com/Hensonkk/Machine-Learning-NBA-MVP" class="button-link">GitHub Repository</a>
-
+    <div class = "center-container">
+        <div id="Home" class="tabcontent">
+            <h1>A Machine Learning Model to Predict the Winner of the NBA Most Valuable Player Award</h1>
+            <img src="images/mvp-trophy.png" alt="mvp trophy">
+            <a href="https://github.com/Hensonkk/Machine-Learning-NBA-MVP" class="button-link">GitHub Repository</a>
+        </div>
     </div>
 
     <div id="Our Team" class="tabcontent">
-
         <h3 class = "large-text">SMU Data Science: Project 4</h3>
-
-        <p class="large-text">Team Members: <br>
-
+        <p class="large-text">Team Members <br>
         <ul class="large-text">
-
             <li>Devin Streeter</li>
                 <ul>
                     <li class="medium-text">Data Pre-Processing and Model Testing</li>
                 </ul>
-
             <li>Sullivan Shave</li>
                 <ul>
-                    <li class="medium-text">GitHub Repo and Dashboard</li>
+                    <li class="medium-text">Model Testing, Visualization, and Front-End Development</li>
                 </ul>
             <li>KeyShawn Henson</li>
                 <ul>
@@ -58,11 +53,12 @@
                 </ul>
             <li>Jack Hayes</li>
                 <ul>
-                    <li class="medium-text">Dashboard</li>
+                    <li class="medium-text">Front-End Development of Dashboard, Deployment, and Documentation</li>
                 </ul>
         </ul>
         </p>
     </div>
+
 
     <div id="Project Goal" class="tabcontent">
         <h1 class = "large-text">SMU Data Science: Project 4</h1>
@@ -100,75 +96,61 @@
                 <tr><td>18</td><td>1996-97</td><td>Vincent Askew</td><td>SG</td><td>30</td><td>43</td><td>19.5</td><td>5.6</td><td>2.1</td><td>2.3</td><td>0.4</td><td>0.1</td><td>0.435</td><td>0.454</td><td>0.795</td><td>2.9</td><td>1.5</td><td>0.086</td><td></td></tr>
                 <tr><td>26</td><td>1996-97</td><td>Isaac Austin</td><td>C</td><td>27</td><td>82</td><td>22.9</td><td>9.7</td><td>1.2</td><td>5.8</td><td>0.5</td><td>0.5</td><td>0.502</td><td>0.502</td><td>0.664</td><td>3.0</td><td>4.0</td><td>0.102</td><td></td></tr>
                 </table>
-        </div>
-        
-            
+        </div>           
     </div>
 
-
-    
 
     <div id="Results" class="tabcontent">
         <h3>Results</h3>
-
         <div id="resultsTab">
-
             <!-- Dropdown for selecting a team member's model -->
-
-            <select id="teamMemberSelector" onchange="showTeamMemberModel()">
-                <option value="">Select a Team Member</option>
-                <option value="ChrisModel">Chris Baker</option>
-                <option value="KeyShawnModel">KeyShawn Henson</option>
-                <option value="DevModel">Devin Streeter</option>
-            </select>
-        
+            <div class="center-container">
+                <select id="teamMemberSelector" onchange="showTeamMemberModel()">
+                    <option value="">Select a Team Member</option>
+                    <option value="ChrisModel">Chris Baker</option>
+                    <option value="KeyShawnModel">KeyShawn Henson</option>
+                    <option value="DevModel">Devin Streeter</option>
+                </select>
+            </div>
+    
             <!-- Sections for each team member's model -->
-
+    
+            <!-- Chris Baker's Model Section -->
             <div id="ChrisModel" class="modelContent">
-
-
-                <h1>Insert Chris' stuff under here</h1>
-
-                <!-- Content for Chris Bakers model -->
-
-                <img src="Charts/First_Place_Points_Correlation.png" alt="MVP Vote Share Correlation">
-                <img src="Charts/Total Points Won Correlation.png" alt="Total Points Won Correlation">
-                <img src="Charts/MVP Vote Share Correlation.png" alt="First Place Points Correlation">
-                <img src="Charts/SHAP_Graph_Dot.png" alt="First Place Points Correlation">
-                <img src="Charts/SHAP_Graph_Violin.png" alt="First Place Points Correlation">
-                
+                <div class="image-container">
+                    <img src="Charts/SHAP_Graph_Dot.png" alt="First Place Points Correlation">
+                </div>
                 <script src="https://d3js.org/d3.v5.min.js"></script>
                 <script src="SVM_model.js"></script>
             </div>
-                
-                            <div id="KeyShawnModel" class="modelContent">
-                <h1>Insert KeyShawns stuff under here</h1>
-
-                <!-- Content for KeyShawn's Model model -->
-                <img src="Key's Folder (Neural Network Model for MVP results)/22-23_Model_Results copy.png.png" alt="22-23 Model Results">
-                <img src="Key's Folder (Neural Network Model for MVP results)/23-24_Model_Results copy.png" alt="23-24 Model Results">
-                <img src="Key's Folder (Neural Network Model for MVP results)/MVP Correlation copy.png" alt="MVP Correlation">
-                <img src="Key's Folder (Neural Network Model for MVP results)/22-23_true_mvp_results copy.png" alt="22-23 True MVP Results">
-                <img src="Key's Folder (Neural Network Model for MVP results)/Analysis_results copy.png" alt="Analysis Results">
-                <a href="Key's Folder (Neural Network Model for MVP results)/NBA_data_preprocessing.ipynb" target="_blank">NBA_data_preprocessing.ipynb</a>
-
-
-                
-                
-
+    
+            <!-- KeyShawn Henson's Model Section -->
+            <div id="KeyShawnModel" class="modelContent">
+                <div class="image-container">
+                    <!-- Content for KeyShawn's Model -->
+                    <img src="Key's Folder (Neural Network Model for MVP results)/MVP Correlation copy.png" alt="MVP Correlation">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/Analysis_results copy2.png" alt="Analysis Results">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/22-23_Model_Results copy2.png" alt="22-23 Model Results">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/22-23_true_mvp_results copy2.png" alt="22-23 True MVP Results">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/23-24_Model_Results copy.png" alt="23-24 Model Results">
+                    <a href="Key's Folder (Neural Network Model for MVP results)/NBA_data_preprocessing.ipynb" class="button-link" target="_blank">Jupyter Notebook</a>
+                </div>
             </div>
-
-           <div id="DevModel" class="modelContent">
-            <h1>Insert Devins stuff under here</h1>
-
-                <!-- Content for Devin's Model -->
-
+    
+            <!-- Devin Streeter's Model Section -->
+            <div id="DevModel" class="modelContent">
+                <div class="image-container">
+                    <!-- Content for Devin's Model -->
+                    <img src="dev-model_test/images/br_accuracy.png" alt="Bayesian">
+                    <img src="dev-model_test/images/feature_correlation.png" alt="Feature Correlation">
+                    <img src="dev-model_test/images/target_correlations.png" alt="Target Correlation">
+                </div>
             </div>
-
         </div>
-        
-          
     </div>
+    
+
+
     <div id="Analysis" class="tabcontent">
         <h3>Analysis</h3>
         <p>Analysis details are shown here.</p>

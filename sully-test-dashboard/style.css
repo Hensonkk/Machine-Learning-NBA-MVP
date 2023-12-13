@@ -125,6 +125,10 @@ h1 {
     text-align: center;
 }
 
+tabcontent-left-align {
+    text-align: left;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -146,8 +150,10 @@ center {
 }
 
 .button-link {
-    display: block;
-    padding: 10px 45px;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 200px;
+    max-width: 400px;
     background-color: #6a6969;
     color: white;
     text-align: center;
@@ -209,6 +215,25 @@ img {
 }
 }
 
+.center-container {
+    text-align: center;
+}
+
+#teamMemberSelector {
+    display: inline-block;
+}
+
+#teamMemberSelector {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+
 .modelContent {
     display: none; /* Initially hidden */
     padding: 20px;
@@ -216,4 +241,8 @@ img {
     border-top: none;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    text-align: center;
 }
