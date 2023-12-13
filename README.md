@@ -14,14 +14,15 @@ Utilizing the NBA MVP scoring system, historical NBA players statistics, and pas
 
 ## Research Questions
 - What statistics have the most impact on MVP voting?
+
+
 - How does previous season performance affect current season MVP voting?
 - How confident should we be with the results of the model? 
 - How does previous MVP voting affect current year voting?
-- How does teammate season injuries affect MVP voting?
-- Is a big trash talking player likely to win MVP?
 - What position is more likely to win the MVP?
 - How does League MVP gambling odds impact voting?
-- Which player has accumulated the most revenue(ex:jersey sales)
+- Does a player who accumulates more revenue for a team have a better chance at getting MVP?(ex:Media spotlight, seating)
+
 
 ## Datasets
 - [NBA MVP Voting Results](https://www.kaggle.com/justinas/nba-mvp-voting-results-from-19802019)
@@ -55,3 +56,5 @@ Once the model is trained and evaluated, we will use current season data to pred
 #### Continuous Learning:
 As each season concludes, we’ll incorporate new data into the model to improve its predictions for future seasons. This can involve retraining the model or employing techniques like online learning.
 Interpretation and Presentation: Understand and present the model's predictions in a meaningful way, possibly identifying which features most strongly influence the likelihood of a player winning the MVP award.
+
+
