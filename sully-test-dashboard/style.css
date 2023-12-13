@@ -90,11 +90,10 @@ body {
 }
 
 .subtabcontent {
-    display: none;
     padding: 20px;
     border: 1px solid #ddd;
     border-top: none;
-    background-color: #fff;
+    background-color: #ff0000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -104,8 +103,9 @@ body {
     color: #444;
 }
 
-.tabcontent {
-    display: none;
+
+.subtabcontent {
+    background-color: #fff;
     
 }
 
@@ -190,3 +190,15 @@ tr:hover {
     overflow-x: auto; /* Enables horizontal scrolling on small screens */
 }
 
+#resultsTab select, #resultsTab button {
+    /* Styles for dropdown or buttons */
+}
+
+.modelContent {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

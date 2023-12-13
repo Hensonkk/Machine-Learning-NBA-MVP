@@ -112,44 +112,45 @@
 
     <div id="Results" class="tabcontent">
         <h3>Results</h3>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <link rel="stylesheet" href="styles.css">
-    
-        <div class="tabs">
-            <button class="subtablinks" onclick="openSubTab(event, 'ChrisModel')">Chris' Model</button>
-            <button class="subtablinks" onclick="openSubTab(event, 'KeyshawnsModel')">Keyshawn's Model</button>
-            <button class="subtablinks" onclick="openSubTab(event, 'SullysModel')">Sully's Model</button>
-            <button class="subtablinks" onclick="openSubTab(event, 'DevsModel')">Dev's Model</button>
-        </div>
-    
-        <div id="bubble-chart" class="subtabcontent">
-            <div class="chart-container" id="bubble-chart-container"></div>
-            <div id="player-modal">
-                <img id="modal-image" alt="Player Image">
-                <div id="modal-stats"></div>
+
+        <div id="resultsTab">
+
+            <!-- Dropdown for selecting a team member's model -->
+
+            <select id="teamMemberSelector" onchange="showTeamMemberModel()">
+                <option value="">Select a Team Member</option>
+                <option value="ChrisModel">Chris Baker</option>
+                <option value="KeyShawnModel">KeyShawn Henson</option>
+                <option value="DevModel">Devin Streeter</option>
+            </select>
+        
+            <!-- Sections for each team member's model -->
+
+            <div id="ChrisModel" class="modelContent">
+                <h1>Insert Chris' stuff under here</h1>
+
+                <!-- Content for Chris Bakers model -->
+
             </div>
 
-            <script src="SVM_model.js" defer></script>
-        </div>
-    
-        <div id="KeyshawnsModel" class="subtabcontent">
-            <!-- <script src="SVM_model.js" defer></script> -->
-        
-            <div class="chart-container" id="keyshawns-bubble-chart-container"></div>
-        
-            <div id="keyshawns-player-modal">
-                <img id="keyshawns-modal-image" alt="Player Image">
-                <div id="keyshawns-modal-stats"></div>
+            <div id="KeyShawnModel" class="modelContent">
+                <h1>Insert KeyShawns stuff under here</h1>
+
+                <!-- Content for KeyShawn's Model model -->
+
             </div>
-            <script src="SVM_model.js" defer></script>
+
+           <div id="DevModel" class="modelContent">
+            <h1>Insert Devins stuff under here</h1>
+
+                <!-- Content for Devin's Model -->
+
+            </div>
+
         </div>
-    
-        <div id="SullysModel" class="subtabcontent">
-            
-        </div>
+        
+          
     </div>
-
     <div id="Analysis" class="tabcontent">
         <h3>Analysis</h3>
         <p>Analysis details are shown here.</p>

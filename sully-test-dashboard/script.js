@@ -18,3 +18,13 @@ function openPage(evt, pageName) {
     evt.currentTarget.className += " active";
 }
 
+function showTeamMemberModel() {
+    var selectedModel = document.getElementById("teamMemberSelector").value;
+    var models = document.getElementsByClassName("modelContent");
+    for (var i = 0; i < models.length; i++) {
+        models[i].style.display = 'none'; // Hide all models
+    }
+    document.getElementById(selectedModel).style.display = 'block'; // Show selected model
+}
+
+
