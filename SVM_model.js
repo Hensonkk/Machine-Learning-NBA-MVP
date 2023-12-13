@@ -122,3 +122,8 @@ d3.csv("Datasets/all_nba_seasons_revised.csv").then(function (statsData) {
         };
     }
 });
+
+const bubbleSvg = d3.select("#bubble-chart-container")
+    .append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter);
