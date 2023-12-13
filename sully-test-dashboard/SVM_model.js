@@ -1,11 +1,11 @@
 // Sample player data
 const playerData = [
     {name:'Joel Embiid', score: 3.2},
-    {name:"De'Aaron Fox", score: 1},
+    {name:'Paul George', score: 1},
     {name:'Tyrese Maxey', score: 2.9},
     {name:'Luka Doncic',score: 2.6},
     {name:'Nikola Jokic', score: 4.6},
-    {name:'Donovan Mitchell', score: 1},
+    {name:'Tyrese Haliburton', score: 1},
     {name:'Giannis Antetokounmpo', score: 2.7},
     {name:'Shai Gilgeous-Alexander', score: 3.8},
     {name:'Stephen Curry', score: 2.2},
@@ -13,7 +13,8 @@ const playerData = [
     {name:'Jayson Tatum', score: 2.6},
     {name:'Kevin Durant', score: 2.6},
     {name:'Damian Lillard', score: 2.3},
-    {name:'LeBron James', score: 2.1}
+    {name:'LeBron James', score: 2.1},
+    {name:'Trae Young', score: 2.1}
 ];
 
 // Sample images path
@@ -22,11 +23,11 @@ const imagePathMap = {
 
     'Jimmy Butler': 'NBA Pictures/Jimmy_Butler_Picture.jpg',
     'Joel Embiid': 'NBA Pictures/Joel_Embiid_Picture.jpg',
-    "De'Aaron Fox": 'NBA Pictures/De’Aaron_Fox_Picture.jpg',
+    'Paul George': 'NBA Pictures/Paul_George_Picture.jpg',
     'Tyrese Maxey': 'NBA Pictures/Tyrese_Maxey_Picture.jpg',
     'Luka Doncic': 'NBA Pictures/Luka_Doncic_Picture.jpg',
     'Nikola Jokic': 'NBA Pictures/Nikola_Jokic_Picture.jpg',
-    'Donovan Mitchell': 'NBA Pictures/Donovan_Mitchell_Picture.jpg',
+    'Tyrese Haliburton': 'NBA Pictures/Tyrese_Haliburton_Picture.jpg',
     'Giannis Antetokounmpo': 'NBA Pictures/Giannis_Antetokounmpo_Picture.jpg',
     'Shai Gilgeous-Alexander': 'NBA Pictures/Shai_Gilgeous-Alexander_Picture.jpg',
     'Ja Morant': 'NBA Pictures/Ja_Morant_Picture.jpg',
@@ -35,7 +36,8 @@ const imagePathMap = {
     'Jayson Tatum': 'NBA Pictures/Jayson_Tatum_Picture.jpg',
     'Kevin Durant': 'NBA Pictures/Kevin_Durant_Picture.jpg',
     'Damian Lillard': 'NBA Pictures/Damian_Lillard_Picture.jpg',
-    'LeBron James': 'NBA Pictures/LeBron_James_Picture.jpg'
+    'LeBron James': 'NBA Pictures/LeBron_James_Picture.jpg',
+    'Trae Young': 'NBA Pictures/Trae_Young_Picture.jpg'
    
 };
 
