@@ -10,24 +10,25 @@
 Devin Streeter, Sullivan Shave, Christopher Baker, KeyShawn Henson, and Jack Hayes
 
 ## Project Description/Outline
-Utilizing the NBA MVP scoring system, historical NBA players statistics, and past NBA MVP winner results, we will aim to create a machine learning model that can predict the 2023-24 NBA MVP.
+Utilizing the NBA MVP scoring system, historical NBA player's statistics, and past NBA MVP winner results, we will aim to create a machine-learning model that can predict the 2023-24 NBA MVP.
 
 ## Research Questions
 - What statistics have the most impact on MVP voting?
 
 
-- How does previous season performance affect current season MVP voting?
+- How does the previous season's performance affect the current season's MVP voting?
 - How confident should we be with the results of the model? 
-- How does previous MVP voting affect current year voting?
-- What position is more likely to win the MVP?
-- How does League MVP gambling odds impact voting?
-- Does a player who accumulates more revenue for a team have a better chance at getting MVP?(ex:Media spotlight, seating)
+- How does previous MVP voting affect current-year voting?
+- What position is most likely to win the MVP?
+- How do gambling odds impact MVP voting?
+- Does a player who accumulates more revenue for a team have a better chance of getting MVP? (ex:Media spotlight, seating)
 
 
 ## Datasets
 - [NBA MVP Voting Results](https://www.kaggle.com/justinas/nba-mvp-voting-results-from-19802019)
 - [Historical NBA Raptor and PREDATOR Data](https://github.com/fivethirtyeight/data/blob/master/nba-raptor/historical_RAPTOR_by_team.csv)
 - [Latest NBA RAPTOR and PREDATOR Data](https://projects.fivethirtyeight.com/nba-model/2023/latest_RAPTOR_by_team.csv)
+- [Archived Sportsbetting Odds (Lines by BetMGM)](https://www.sportsoddshistory.com/nba-awd-champs/)
 
 ## Breakdown of Tasks
 
