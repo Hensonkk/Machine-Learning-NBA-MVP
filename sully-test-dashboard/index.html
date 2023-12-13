@@ -117,15 +117,23 @@
     
             <!-- Chris Baker's Model Section -->
             <div id="ChrisModel" class="modelContent">
-                <div class="image-container">
-                    <img src="Charts/SHAP_Graph_Dot.png" alt="First Place Points Correlation">
-                </div>
-                <script src="https://d3js.org/d3.v5.min.js"></script>
-                <script src="SVM_model.js"></script>
+
+                
+                <div class="image-container"></div>
+                <img src="Charts/SHAP_Graph_Dot.png" alt="First Place Points Correlation">
+
             </div>
     
             <!-- KeyShawn Henson's Model Section -->
             <div id="KeyShawnModel" class="modelContent">
+                <div id="bubble-chart"></div>
+
+                <div id="player-modal">
+                    <img id="modal-image" src="" alt="Player Image">
+                    <div id="modal-stats"></div>
+                </div>
+                <script src="https://d3js.org/d3.v5.min.js"></script>
+                <script src="SVM_model.js"></script>
                 <div class="image-container">
                     <!-- Content for KeyShawn's Model -->
                     <img src="Key's Folder (Neural Network Model for MVP results)/MVP Correlation copy.png" alt="MVP Correlation">
