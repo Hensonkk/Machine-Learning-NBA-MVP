@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA MVP</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="tab">
+        <button class="tablinks active" onclick="openPage(event, 'Home')">Home</button>
+        <button class="tablinks" onclick="openPage(event, 'Our Team')">Our Team</button>
+        <button class="tablinks" onclick="openPage(event, 'Project Goal')">Project Goal</button>
+        <button class="tablinks" onclick="openPage(event, 'Data')">Data</button>
+        <button class="tablinks" onclick="openPage(event, 'Results')">Results</button>
+        <button class="tablinks" onclick="openPage(event, 'Analysis')">Analysis</button>
+    </div>
+
+    <div class = "center-container">
+        <div id="Home" class="tabcontent">
+            <h1>A Machine Learning Model to Predict the Winner of the NBA Most Valuable Player Award</h1>
+            <img src="sully-test-dashboard/images/mvp-trophy.png" alt="mvp trophy">
+            <a href="https://github.com/Hensonkk/Machine-Learning-NBA-MVP" class="button-link">GitHub Repository</a>
+        </div>
+    </div>
+
+    <div id="Our Team" class="tabcontent">
+        <h3 class = "large-text">SMU Data Science: Project 4</h3>
+        <p class="large-text">Team Members <br>
+        <ul class="large-text">
+            <li>Devin Streeter</li>
+                <ul>
+                    <li class="medium-text">Data Pre-Processing and Model Testing</li>
+                </ul>
+            <li>Sullivan Shave</li>
+                <ul>
+                    <li class="medium-text">Model Testing, Visualization, and Front-End Development</li>
+                </ul>
+            <li>KeyShawn Henson</li>
+                <ul>
+                    <li class="medium-text">Data Pre-Processing and Model Testing</li>
+                </ul>
+            <li>Chris Baker</li>
+                <ul>
+                    <li class="medium-text">Data Pre-Processing and Model Testing</li>
+                </ul>
+            <li>Jack Hayes</li>
+                <ul>
+                    <li class="medium-text">Front-End Development of Dashboard, Deployment, and Documentation</li>
+                </ul>
+        </ul>
+        </p>
+    </div>
+
+
+    <div id="Project Goal" class="tabcontent">
+        <h1 class = "large-text">SMU Data Science: Project 4</h1>
+        <h3 class = "large-text">Our Goal</h3>
+        <p class="large-text">The goal of this project is to create a machine learning model that can predict the winner of the NBA Most Valuable Player award.</p>
+        
+        <h3 class = "large-text">Research Questions</h3>
+        <p class="medium-text">The research questions we are trying to answer are:</p>
+        <ul class="medium-text">
+            <li>What statistics have the most impact on MVP voting?</li>
+            <li>How does previous season performance affect current season MVP voting?</li>
+            <li>How confident should we be with the results of the model?</li>
+            <li>How does previous MVP voting affect current year voting?</li>
+            <li>What position is more likely to win the MVP?</li>
+            <li>How does League MVP gambling odds impact voting?</li>
+            <li>Which player has accumulated the most revenue(ex: jersey sales)</li>
+    </div>
+
+    <div id="Data" class="tabcontent">
+        <h3 class = "large-text">Preview of Our Datasets</h3>
+        <p>As seen in our GitHub Repository, we have approximately 12 datasets in CSV format. The column names vary slightly per each dataset, but they all follow a similair structure.</p>
+        <div class="table-container">
+            <table>
+                <tr><td></td><td>Season</td><td>Player</td><td>Pos</td><td>Age</td><td>G</td><td>MP</td><td>PTS</td><td>AST</td><td>TRB</td><td>STL</td><td>BLK</td><td>FG%</td><td>eFG%</td><td>FT%</td><td>PF</td><td>WS</td><td>WS/48</td><td>MVP</td></tr>
+                <tr><td>0</td><td>1996-97</td><td>Mahmoud Abdul-Rauf</td><td>PG</td><td>27</td><td>75</td><td>28.4</td><td>13.7</td><td>2.5</td><td>1.6</td><td>0.7</td><td>0.1</td><td>0.445</td><td>0.496</td><td>0.846</td><td>2.3</td><td>2.7</td><td>0.06</td><td></td></tr>
+                <tr><td>1</td><td>1996-97</td><td>Shareef Abdur-Rahim</td><td>PF</td><td>20</td><td>80</td><td>35.0</td><td>18.7</td><td>2.2</td><td>6.9</td><td>1.0</td><td>1.0</td><td>0.453</td><td>0.456</td><td>0.746</td><td>2.5</td><td>2.9</td><td>0.049</td><td></td></tr>
+                <tr><td>3</td><td>1996-97</td><td>Cory Alexander</td><td>PG</td><td>23</td><td>80</td><td>18.2</td><td>7.2</td><td>3.2</td><td>1.5</td><td>1.0</td><td>0.2</td><td>0.396</td><td>0.492</td><td>0.736</td><td>1.9</td><td>1.1</td><td>0.035</td><td></td></tr>
+                <tr><td>7</td><td>1996-97</td><td>Ray Allen</td><td>SG</td><td>21</td><td>82</td><td>30.9</td><td>13.4</td><td>2.6</td><td>4.0</td><td>0.9</td><td>0.1</td><td>0.43</td><td>0.494</td><td>0.823</td><td>2.7</td><td>4.9</td><td>0.092</td><td></td></tr>
+                <tr><td>11</td><td>1996-97</td><td>Kenny Anderson</td><td>PG</td><td>26</td><td>82</td><td>37.6</td><td>17.5</td><td>7.1</td><td>4.4</td><td>2.0</td><td>0.2</td><td>0.427</td><td>0.485</td><td>0.768</td><td>2.7</td><td>12.4</td><td>0.193</td><td></td></tr>
+                <tr><td>12</td><td>1996-97</td><td>Nick Anderson</td><td>SG</td><td>29</td><td>63</td><td>34.3</td><td>12.0</td><td>2.9</td><td>4.8</td><td>1.9</td><td>0.5</td><td>0.397</td><td>0.496</td><td>0.404</td><td>2.5</td><td>4.2</td><td>0.093</td><td></td></tr>
+                <tr><td>13</td><td>1996-97</td><td>Shandon Anderson</td><td>SG</td><td>23</td><td>65</td><td>16.4</td><td>5.9</td><td>0.8</td><td>2.8</td><td>0.4</td><td>0.1</td><td>0.462</td><td>0.5</td><td>0.687</td><td>1.7</td><td>1.2</td><td>0.056</td><td></td></tr>
+                <tr><td>15</td><td>1996-97</td><td>Greg Anthony</td><td>PG</td><td>29</td><td>65</td><td>28.7</td><td>9.5</td><td>6.3</td><td>2.8</td><td>2.0</td><td>0.1</td><td>0.393</td><td>0.479</td><td>0.73</td><td>1.9</td><td>3.5</td><td>0.09</td><td></td></tr>
+                <tr><td>16</td><td>1996-97</td><td>B.J. Armstrong</td><td>PG</td><td>29</td><td>49</td><td>20.8</td><td>7.9</td><td>2.6</td><td>1.5</td><td>0.5</td><td>0.0</td><td>0.453</td><td>0.491</td><td>0.861</td><td>1.1</td><td>1.3</td><td>0.061</td><td></td></tr>
+                <tr><td>17</td><td>1996-97</td><td>Darrell Armstrong</td><td>PG</td><td>28</td><td>67</td><td>15.1</td><td>6.1</td><td>2.6</td><td>1.1</td><td>0.9</td><td>0.1</td><td>0.383</td><td>0.462</td><td>0.868</td><td>1.7</td><td>1.8</td><td>0.085</td><td></td></tr>
+                <tr><td>18</td><td>1996-97</td><td>Vincent Askew</td><td>SG</td><td>30</td><td>43</td><td>19.5</td><td>5.6</td><td>2.1</td><td>2.3</td><td>0.4</td><td>0.1</td><td>0.435</td><td>0.454</td><td>0.795</td><td>2.9</td><td>1.5</td><td>0.086</td><td></td></tr>
+                <tr><td>26</td><td>1996-97</td><td>Isaac Austin</td><td>C</td><td>27</td><td>82</td><td>22.9</td><td>9.7</td><td>1.2</td><td>5.8</td><td>0.5</td><td>0.5</td><td>0.502</td><td>0.502</td><td>0.664</td><td>3.0</td><td>4.0</td><td>0.102</td><td></td></tr>
+                </table>
+        </div>           
+    </div>
+
+
+    <div id="Results" class="tabcontent">
+        <h3>Results</h3>
+        <div id="resultsTab">
+            <!-- Dropdown for selecting a team member's model -->
+            <div class="center-container">
+                <select id="teamMemberSelector" onchange="showTeamMemberModel()">
+                    <option value="">Select a Team Member</option>
+                    <option value="ChrisModel">Chris Baker</option>
+                    <option value="KeyShawnModel">KeyShawn Henson</option>
+                    <option value="DevModel">Devin Streeter</option>
+                </select>
+            </div>
+    
+            <!-- Sections for each team member's model -->
+    
+            <!-- Chris Baker's Model Section -->
+            <div id="ChrisModel" class="modelContent">
+                <div class="image-container">
+                    <img src="sully-test-dashboard/Charts/SHAP_Graph_Dot.png" alt="First Place Points Correlation">
+                </div>
+                <script src="https://d3js.org/d3.v5.min.js"></script>
+                <script src="sully-test-dashboard/SVM_model.js"></script>
+            </div>
+    
+            <!-- KeyShawn Henson's Model Section -->
+            <div id="KeyShawnModel" class="modelContent">
+                <div class="image-container">
+                    <!-- Content for KeyShawn's Model -->
+                    <img src="Key's Folder (Neural Network Model for MVP results)/MVP Correlation copy.png" alt="MVP Correlation">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/Analysis_results copy2.png" alt="Analysis Results">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/22-23_Model_Results copy2.png" alt="22-23 Model Results">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/22-23_true_mvp_results copy2.png" alt="22-23 True MVP Results">
+                    <img src="Key's Folder (Neural Network Model for MVP results)/23-24_Model_Results copy.png" alt="23-24 Model Results">
+                    <a href="Key's Folder (Neural Network Model for MVP results)/NBA_data_preprocessing.ipynb" class="button-link" target="_blank">Jupyter Notebook</a>
+                </div>
+            </div>
+    
+            <!-- Devin Streeter's Model Section -->
+            <div id="DevModel" class="modelContent">
+                <div class="image-container">
+                    <!-- Content for Devin's Model -->
+                    <img src="dev-model_test/images/br_accuracy.png" alt="Bayesian">
+                    <img src="dev-model_test/images/feature_correlation.png" alt="Feature Correlation">
+                    <img src="dev-model_test/images/target_correlations.png" alt="Target Correlation">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div id="Analysis" class="tabcontent">
+        <h3>Analysis</h3>
+        <p>Analysis details are shown here.</p>
+    </div>
+
+    <script>
+    
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
